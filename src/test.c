@@ -1,5 +1,6 @@
 #include <SDL2/SDL.h>
-#include "audio.h"
+//#include "audio.h"
+#include "audio.c"
 
 int main(void)
 {
@@ -13,15 +14,15 @@ int main(void)
     initAudio();
 
     /* Play music and a sound */
-    playMusic("music/highlands.wav", SDL_MIX_MAXVOLUME);
-    playSound("sounds/door1.wav", SDL_MIX_MAXVOLUME / 2);
+    //playMusic("../music/highlands.wav", SDL_MIX_MAXVOLUME);
+    /* Override music, play another sound */
+    playMusic("Astronomia1.wav", SDL_MIX_MAXVOLUME/4);
+    SDL_Delay(1000);
+    playSound("../sounds/door1.wav", SDL_MIX_MAXVOLUME / 2);
 
     /* While using delay for showcase, don't actually do this in your project */
-    SDL_Delay(1000);
+    //SDL_Delay(1000);
 
-    /* Override music, play another sound */
-    playMusic("music/road.wav", SDL_MIX_MAXVOLUME);
-    SDL_Delay(1000);
 
     /* Pause audio test */
     pauseAudio();

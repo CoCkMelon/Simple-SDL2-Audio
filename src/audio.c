@@ -34,7 +34,7 @@
  *      ffmpeg -i in.mp3 -acodec pcm_s16le -ac 2 -ar 48000 out.wav
  */
 /* SDL_AudioFormat of files, such as s16 little endian */
-#define AUDIO_FORMAT AUDIO_S16LSB
+#define AUDIO_FORMAT AUDIO_S32LSB
 
 /* Frequency of the file */
 #define AUDIO_FREQUENCY 48000
